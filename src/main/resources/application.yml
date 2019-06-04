@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/gd_base
+    data-username: gd_base
+    data-password: 11
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    password: minstone123456
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+    timeout: 20000
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
