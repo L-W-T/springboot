@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="keywords" content="关键字" />
+    <meta name="description" content="此网页描述" />
+</head>
+<body>
+websocket简单实现
+<img id= "testImg" src="/springboot/erweima.png">
+<script type="text/javascript" src="/springboot/jquery.min.js"></script>
+<script>
+
+
+    var socket;
+    if(typeof(WebSocket) == "undefined") {
+        console.log("您的浏览器不支持WebSocket");
+    }else{
+        console.log("您的浏览器支持WebSocket");
+
+        socket = new WebSocket("ws://127.0.0.1:1111/springboot/websocket");//(通过自己的ip+端口+url连接)
+
+//打开事件
+        socket.onopen = function() {
+            console.log("Socket 已打开");
+            socket.send("这是来自客户端的消息" + location.href + new Date());
+        };
+//获得消息事件
+        socket.onmessage = function(msg) {
+            console.log(msg.data);
+            if(msg.data == "websocket"){
+                $("#testImg").attr("src","/springboot/success.jpg");
+            }
+//发现消息进入 开始处理前端触发逻辑
+        };
+//关闭事件
+        socket.onclose = function() {
+            console.log("Socket已关闭");
+        };
+//发生了错误事件
+        socket.onerror = function() {
+            alert("Socket发生了错误");
+//此时可以尝试刷新页面
+        }
+
+    }
+</script>
+</body>
+</html>
