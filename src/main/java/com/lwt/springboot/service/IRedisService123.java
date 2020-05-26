@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public interface IRedisService {
+public interface IRedisService123 {
 
     boolean expire(String key, long time);
 

@@ -4,6 +4,6 @@ import com.lwt.springboot.domain.UserBean;
 
 import java.util.List;
 
-public interface IUserService {
+public interface IUserService123 {
     List<UserBean> queryUserInfo();
 }
