@@ -3,8 +3,6 @@ package com.lwt.springboot.domain;
 
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-@TableName("outernet_user")
 public class UserBean implements Serializable {
     private String uId;
     private String uName;
