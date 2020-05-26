@@ -14,15 +14,21 @@ spring:
     data-username: gd_base
     data-password: 11
     driver-class-name: com.mysql.jdbc.Driver
-  redis:
-    host: 127.0.0.1
-    password: minstone123456
-    port: 6379
-    pool:
-      max-idle: 100
-      min-idle: 1
-      max-active: 1000
-      max-wait: -1
-    timeout: 20000
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
+  #redis:
+   # host: 127.0.0.1
+    #password: minstone123456
+    #port: 6379
+    #pool:
+     # max-idle: 100
+      #min-idle: 1
+      #max-active: 1000
+      #max-wait: -1
+    #timeout: 20000
+  #rabbitmq:
+   # host: 127.0.0.1
+    #port: 5672
+    #virtual-host: testhost
+    #username: admin
+    #password: abc123
+#mybatis:
+ # mapper-locations: classpath:mapper/*.xml
